@@ -43,6 +43,10 @@ interface g0/1
 switchport mode trunk
 switchport trunk encapsulation dot1q
 switchport trunk allowed vlan 10,20
+```
+### Router 
+
+```bash
 interface g0/0.10
 encapsulation dot1Q 10
 ip address 192.168.10.1 255.255.255.0
@@ -56,3 +60,9 @@ interface g0/1.40
 encapsulation dot1Q 40
 ip address 192.168.40.1 255.255.255.0
 no shutdown
+```
+
+## Résultats attendus
+- PC du même VLAN communiquent entre eux
+- Communication possible entre VLAN grâce au Router-on-a-Stick
+- Test des ping OK sur toutes les sous-réseaux
